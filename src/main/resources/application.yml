@@ -1,6 +1,15 @@
 spring:
   application:
     name: demo
-
+  cloud:
+    vault:
+      uri: http://192.168.0.193:8200
+      token: hvs.4PwW63VCkmp9uXEooDMcF52N
+      kv:
+        enabled: true
+        backend: services
+        application-name: demo
+  profiles:
+    active: dev
 server:
   port: 8080
