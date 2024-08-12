@@ -15,6 +15,7 @@ public class ApiService {
     @Value("${NAME}")
     private String name;
 
+
     private final RestTemplate restTemplate;
 
     @Autowired
