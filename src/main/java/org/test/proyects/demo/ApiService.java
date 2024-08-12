@@ -15,6 +15,8 @@ public class ApiService {
     @Value("${NAME}")
     private String name;
 
+    @Value("${test}")
+    private String test;
 
     private final RestTemplate restTemplate;
 
@@ -26,6 +28,7 @@ public class ApiService {
     public ResponseEntity<String> getExampleData() {
 
         log.info("Esta es un mensaje de prueba: {}", name);
+        log.info("Esta es una kv de testeo: {}", test);
 
         String url = "https://6659010ede346625136b17fc.mockapi.io/api/vi/quejas";
 

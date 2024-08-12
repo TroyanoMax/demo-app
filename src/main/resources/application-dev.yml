@@ -1,3 +1,4 @@
 
-NAME: este es un texto de prueba
+NAME: ${prueba}:texto name si no encuentra vault
 
+test: ${kv-test}:texto test si encuetra vault
