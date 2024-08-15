@@ -5,6 +5,6 @@ DB_USER: postgres
 DB_NAME: postgres
 DB_DRIVER: org.postgresql.Driver
 
-NAME: ${prueba}:texto name si no encuentra vault
+NAME: ${prueba}
 
-test: ${kv-test}:texto test si encuetra vault
+test: ${kv-test}
