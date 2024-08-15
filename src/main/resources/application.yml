@@ -3,12 +3,12 @@ spring:
     name: demo
   cloud:
     vault:
-      uri: http://192.168.0.193:8200
-      token: hvs.8BV9BpKW2rsmLy3eXqD6Uu92
+      uri: ${VAULT_URL}
+      token: ${VAULT_TOKEN}
       kv:
         enabled: true
-        backend: services
-        application-name: demo
+        backend: ${VAULT_BACKEND}
+        application-name: ${VAULT_APPLICATION_NAME}
   config:
     import: vault://
   profiles:
