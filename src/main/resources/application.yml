@@ -13,5 +13,14 @@ spring:
     import: vault://
   profiles:
     active: dev
+  datasource:
+    url: ${DB_HOST}/${DB_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    driver-class-name: ${DB_DRIVER}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 server:
   port: 8080
