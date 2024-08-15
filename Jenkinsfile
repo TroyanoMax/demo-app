@@ -22,7 +22,7 @@ pipeline {
                 }
             }
         }
-
+jen
         stage('Build Docker Image') {
             steps {
                 script {
