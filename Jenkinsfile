@@ -27,7 +27,8 @@ jen
             steps {
                 script {
                     // Construye la imagen Docker
-                    sh "docker build -t ${DOCKER_IMAGE} ."
+                    // sh "docker build -t ${DOCKER_IMAGE} ."
+                    sh "docker exec docker-builder docker build -t ${DOCKER_IMAGE} /path/to/context ."
                 }
             }
         }
