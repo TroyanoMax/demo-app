@@ -1,6 +1,26 @@
 spring:
   application:
     name: demo
-
+  cloud:
+    vault:
+      uri: ${VAULT_URL}
+      token: ${VAULT_TOKEN}
+      kv:
+        enabled: true
+        backend: ${VAULT_BACKEND}
+        application-name: ${VAULT_APPLICATION_NAME}
+  config:
+    import: vault://
+  profiles:
+    active: dev
+  datasource:
+    url: ${DB_HOST}/${DB_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    driver-class-name: ${DB_DRIVER}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 server:
   port: 8080
